@@ -1,0 +1,30 @@
+[33mcommit a0a0f3ede725337790da48ff24d06276c17339f5[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Galymzhan K <capomafiosoken@gmail.com>
+Date:   Fri Mar 13 00:04:09 2020 +0600
+
+    my changes
+
+[33mcommit 60ed814adf05508ff824dbdd170d4d1467513097[m
+Merge: cb11497 fdf9abb
+Author: Galymzhan K <capomafiosoken@gmail.com>
+Date:   Fri Mar 6 11:55:59 2020 +0600
+
+    Test
+
+[33mcommit cb11497b00f6cb8f10197250181e70bb19b408cf[m
+Author: Galymzhan K <capomafiosoken@gmail.com>
+Date:   Fri Mar 6 11:51:02 2020 +0600
+
+    Test
+
+[33mcommit fdf9abb666134a1907042f910067e1762d99620f[m
+Author: aibekzh <aibek_zhumash@mail.ru>
+Date:   Fri Mar 6 11:48:15 2020 +0600
+
+    last changes
+
+[33mcommit dcdfa511d0b4a5d3cd431f75fee7c116c6c441f9[m
+Author: aibekzh <aibek_zhumash@mail.ru>
+Date:   Fri Mar 6 00:15:19 2020 +0600
+
+    first commit
