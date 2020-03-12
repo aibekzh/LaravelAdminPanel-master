@@ -202,7 +202,7 @@ return [
 
     'aliases' => [
 
-        'MetaTag' => Fomvasss\LaravelMetaTags\Facade::class,
+        'MetaTag'   => Torann\LaravelMetaTags\Facades\MetaTag::class,
         'BlogApp' => Illuminate\Support\Facades\App::class,
         'Arr' => Illuminate\Support\Arr::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,

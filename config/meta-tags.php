@@ -7,7 +7,7 @@ return [
      | -----------------------------------------------------------------
      */
     'model' => \Fomvasss\LaravelMetaTags\Models\MetaTag::class,
-    
+
     /* -----------------------------------------------------------------
      |  Available fields (for migration, render in blade,...)
      |  Uncoment nedded:
@@ -18,7 +18,7 @@ return [
         'title' => ['title' => 'Title'],                // recommend max => 60
         'description' => ['title' => 'Description'],    // recommend max => 300
         'keywords' => ['title' => 'Keywords'],          // recommend max => 300
-        
+
         //  OG-tags
         // 'og_site_name' => ['title' => 'OG-site_name', 'default' => '[site:name]', 'type' => 'og'],
         // 'og_locale' => ['title' => 'OG-locale', 'type' => 'og'],
@@ -30,7 +30,7 @@ return [
         // 'og_audio' => ['title' => 'OG-audio', 'type' => 'og'],
         // 'og_determiner' => ['title' => 'OG-determiner', 'type' => 'og'],
         // 'og_video' => ['title' => 'OG-video',  'type' => 'og'],
-        
+
         //  Additional SEO-fields
         // 'h1' => ['title' => 'H1'],
         // 'seo_text' => ['title' => 'SEO-text'],
@@ -52,8 +52,8 @@ return [
         ],
         'fb_app_id' => '',
     ],
-    
-    
+
+
     /* -----------------------------------------------------------------
      |  This is example, for dashboard SEO form,...
      |  Available values
@@ -65,7 +65,7 @@ return [
         'changefreq' => ['always', 'daily', 'hourly', 'weekly',],
         'priority' => [0.1, 0.2, 0.3, 0.5, 0.6, 0.7, 0.8, 0.9,],
     ],
-    
+
     /* -----------------------------------------------------------------
      |  This is example, for dashboard SEO form,...
      |  Meta-tags for entity types...
