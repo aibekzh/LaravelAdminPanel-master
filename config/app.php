@@ -186,6 +186,7 @@ return [
 
         /** providers for project */
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        Reliese\Coders\CodersServiceProvider::class,
 
     ],
 

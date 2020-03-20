@@ -1,83 +1,63 @@
 <?php
 
-    namespace App\Models;
+/**
+ * Created by Reliese Model.
+ */
 
-    namespace App\Models;
+namespace App\Models;
 
-    use Illuminate\Database\Eloquent\SoftDeletes;
-    use Illuminate\Notifications\Notifiable;
-    use Illuminate\Foundation\Auth\User as Authenticatable;
+use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
-    /**
-     * Class User
-     * @package App\Models
-     */
-    class User extends Authenticatable
-    {
-        use Notifiable;
+/**
+ * Class User
+ * 
+ * @property int $id
+ * @property string $name
+ * @property string $email
+ * @property Carbon $email_verified_at
+ * @property string $password
+ * @property string $remember_token
+ * @property Carbon $created_at
+ * @property Carbon $updated_at
+ * @property string $deleted_at
+ * 
+ * @property Collection|Address[] $addresses
+ * @property Collection|Role[] $roles
+ *
+ * @package App\Models
+ */
+class User extends Model
+{
+	use SoftDeletes;
+	protected $table = 'users';
 
+	protected $dates = [
+		'email_verified_at'
+	];
 
-        /**
-         * The attributes that are mass assignable.
-         *
-         * @var array
-         */
-        protected $fillable = [
-            'id',
-            'name',
-            'email',
-            'password',
-        ];
+	protected $hidden = [
+		'password',
+		'remember_token'
+	];
 
-        /**
-         * The attributes that should be hidden for arrays.
-         *
-         * @var array
-         */
-        protected $hidden = [
-            'password',
-            'remember_token',
-        ];
+	protected $fillable = [
+		'name',
+		'email',
+		'email_verified_at',
+		'password',
+		'remember_token'
+	];
 
-        /**
-         * The attributes that should be cast to native types.
-         *
-         * @var array
-         */
-        protected $casts = [
-            'email_verified_at' => 'datetime',
-        ];
+	public function addresses()
+	{
+		return $this->hasMany(Address::class);
+	}
 
-
-        public function roles()
-        {
-            return $this->belongsToMany(Role::class, 'user_roles');
-        }
-
-        public function isAdministrator()
-        {
-           return $this->roles()->where('name', 'admin')->exists();
-        }
-
-        public function isUser()
-        {
-            $user = $this->roles()->where('name', 'user')->exists();
-            if ($user) return "user";
-        }
-
-        public function isDisabled()
-        {
-            $disabled = $this->roles()->where('name', 'disabled')->exists();
-            if ($disabled) return "disabled";
-        }
-
-        public function isVisitor()
-        {
-            $user = $this->roles()->where('name', '')->exists();
-            if ($user) return "user";
-        }
-
-
-
-    }
-
+	public function roles()
+	{
+		return $this->belongsToMany(Role::class, 'user_roles');
+	}
+}
