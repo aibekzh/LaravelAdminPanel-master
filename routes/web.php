@@ -93,11 +93,11 @@
 
 
 
-
-
-
-            Route::resource('posts', 'PostController')
-                ->names('blog.admin.posts');
+//
+//
+//
+//            Route::resource('posts', 'PostController')
+//                ->names('blog.admin.posts');
 
 
         });
